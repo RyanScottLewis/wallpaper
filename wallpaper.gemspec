@@ -2,14 +2,14 @@
 
 Gem::Specification.new do |s|
   s.name = "wallpaper"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Scott Lewis"]
   s.date = "2012-10-09"
   s.description = "Easily obtain wallpapers from common desktop wallpaper websites."
   s.email = "ryan@rynet.us"
-  s.files = ["VERSION", "wallpapers.gemspec"]
+  s.files = [".gitignore", "Gemfile", "Rakefile", "VERSION", "lib/wallpaper.rb", "spec/spec_helper.rb", "spec/wallpaper_spec.rb", "wallpaper.gemspec"]
   s.homepage = "http://github.com/c00lryguy/wallpaper"
   s.post_install_message = "This is a placeholder gem... for now. Check back in a few versions!"
   s.require_paths = ["lib"]
