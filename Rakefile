@@ -1,9 +1,12 @@
 require 'rake/version_task'
 require 'rspec/core/rake_task'
+require 'rubygems/package_task'
+require 'pathname'
 
 spec = Gem::Specification.new do |s|
   s.name         = 'wallpaper'
   s.platform     = Gem::Platform::RUBY
+  s.version      = Pathname.new(__FILE__).dirname.join('VERSION').read.strip
   s.author       = 'Ryan Scott Lewis'
   s.email        = 'ryan@rynet.us'
   s.homepage     = "http://github.com/c00lryguy/#{s.name}"
@@ -23,5 +26,10 @@ Rake::VersionTask.new do |t|
 end
 
 RSpec::Core::RakeTask.new
+
+Gem::PackageTask.new(spec) do |t|
+  t.need_zip = true
+  t.need_tar = true
+end
 
 task :default => :spec
