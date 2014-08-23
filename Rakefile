@@ -18,6 +18,8 @@ spec = Gem::Specification.new do |s|
   s.executables  = `git ls-files -- bin/*`.lines.to_a.collect { |s| File.basename(s.strip) }
   
   s.add_dependency 'version', '~> 1'
+  s.add_dependency 'httparty', '~> 0.9'
+  s.add_dependency 'active_support', '~> 3'
 end
 
 Rake::VersionTask.new do |t|
